@@ -1,3 +1,18 @@
+
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 #typeDiv {
 	position: absolute;
 	top: 45%;
@@ -7,17 +22,20 @@
 	width: 100%;
 	height: 10%;
 	text-align: center;
+	overflow: visible;
 }
 
 #txt1 {
-	font-size: 28px;
+	font-size: 36px !important;
 	text-align: center;
 	color: white;
+	overflow: visible;
 }
 #txt2 {
-	font-size: 28px;
+	font-size: 36px !important;
 	text-align: center;
 	color: white;
+	overflow: visible;
 }
 
 #content{
@@ -28,6 +46,8 @@
 	margin: auto;
 	width: 100%;
 	height: 20%;
+	overflow: hidden;
+
 }
 
 #together{
@@ -35,10 +55,19 @@
 	text-align: center;
 	color: white;
 }
+#timer {
+    text-align: center;
+    color: white;
+    display: inline-flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+}
 
-#timer{
-	text-align: center;
-	color: white;
+.and {
+    margin-left: 0.5px; /* لتقريب "و" من الرقم */
+    margin-right: 10px; /* لزيادة المسافة بين الكلمة و "و" */
 }
 
 #d{
@@ -76,10 +105,12 @@
 	text-align: center;
 	color: white;
 }
-
 #heart {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;  /* Horizontally center the button */
+    align-items: center;      /* Vertically center the button */
+    width: 130px;             /* Set explicit size for the heart container */
+    height: 130px;            /* Set explicit size for the heart container */
     opacity: 0.5;
     transition: opacity 0.3s ease;
 }
@@ -88,25 +119,24 @@
     opacity: 1;
 }
 
-
-#button{
-	background-image: url("../pic/love.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-color: transparent;
-	border: none;
-	outline: none;
-	background-position: center;
-	transition: 0.1s;
-	width: 100%;
-	height: 100%;
-
+#button {
+    background-image: url("../pic/love.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-position: center;
+    transition: 0.1s;
+    width: 300px;   /* Larger size */
+    height: 300px;  /* Larger size */
 }
 
 #button:active {
-	width: 92%;
-	height: 92%;
+    width: 270px;   /* Shrink proportionally on active state */
+    height: 270px;
 }
+
 
 #imgTxt{
 	position: absolute;
@@ -126,8 +156,11 @@
 	right: 0;
 	margin: auto;
 	width: auto;
-	height: 100%;
-	max-height: 470px;
+	height: auto;
+	max-width: 82vw;
+	max-height: 60vh;
+
+	
 }
 
 #Txt{
